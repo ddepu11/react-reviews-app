@@ -34,6 +34,7 @@ body {
     #12a9eb
   );
   color: white;
+  padding: 10px 20px 20px;
 }
 .container {
   max-width: 1200px;
@@ -62,13 +63,13 @@ button:focus {
   margin-top: 30px;
   font-size: 2.5em;
   letter-spacing: 2px;
-  z-index: 0;
 }
+
 .line {
   width: 10%;
   height: 4px;
   border-radius: 10px;
-  background: chartreuse;
+  background: var(--primary);
   margin: auto;
   margin-bottom: 50px;
 }
@@ -164,4 +165,49 @@ button {
   background: var(--secondary);
   border-radius: 10px;
   margin: 10px 0 20px 0;
+  transition: all 0.5s ease-out;
+}
+button:hover {
+  transform: scale(1.1) translateY(-3px);
+  background: #9ef8f8;
+  color: black;
+}
+@media (max-width: 600px) {
+  .container h2 {
+    margin-top: 10px;
+    font-size: 2em;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+  }
+  .avatar::after {
+    width: 32%;
+    height: 32%;
+  }
+  .line {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  .details h3 {
+    font-size: 1.1em;
+  }
+  .details span {
+    font-size: 0.85em;
+  }
+  .details p {
+    margin-top: 15px;
+    font-size: 1em;
+    word-spacing: 1px;
+    line-height: 1.2;
+  }
+  button {
+    padding: 8px 16px;
+    color: var(--primary);
+    font-size: 1.1em;
+  }
+  i {
+    transform: scale(0.9);
+  }
 }
